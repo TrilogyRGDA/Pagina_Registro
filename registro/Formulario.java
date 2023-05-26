@@ -31,7 +31,7 @@ import Seleccion_MembresiaCod.Seleccion_Membresia;
 import javax.swing.JComboBox;
 /**
  * En esta clase es para el registro. 
- * Esta clase puedes registrarte y te redirige a la pantalla para elegir la membresia para que luego puedas consumir el contenido audiovisual respectivo a la membresia adquirida.
+ * Esta clase puedes registrarte y te redirige a la pantalla para elegir la membresía para que luego puedas consumir el contenido audiovisual respectivo a la membresía adquirida.
  * La ventana de registro te permite registrarte en la aplicación para poder consumir los contenidos de la aplicación.
  * @param contentPane CONTIENE TODOS LOS ATRIBUTOS DE LA PÁGINA.
  * @param txtIntroduceTuNombre TIENE EL TEXTO DEL NOMBRE DEL USUARIO.
@@ -39,35 +39,35 @@ import javax.swing.JComboBox;
  * @param txt_confirmaEmail TIENE EL TEXTO DE LA CONFIRMACIÓN DE EMAIL.
  * @param txtFecha TIENE EL TEXTO DE LA FECHA DE CADUCIDAD DE LA TARJETA
  * @param txtIntroduceTusEmail_1 TIENE EL TEXTO DEL EMAIL DEL USUARIO.
- * @param textNCuenta TIENE EL TEXTO DEL NUMERO DE CUENTA DE LA TARJETA DEL USUARIO.
+ * @param textNCuenta TIENE EL TEXTO DEL NÚMERO DE CUENTA DE LA TARJETA DEL USUARIO.
  * @param text_IntroduceApellidos_1 TIENE EL TEXTO DE LOS APELLIDOS DEL USUARIO.
  * @param textCalle TIENE EL TEXTO DE LA CALLE DONDE VIVE EL USUARIO.
  * @param ComboBoxTipo TIENE LAS OPCIONES DE TIPOS DE PAGO QUE PERMITE.
- * @param btnRegistrarme REGISTRA AL USUARIO RECOGIENDO LOS PARAMETROS ANTERIORES.
- * @param btnInicio_Sesion MANDA AL USUARIO A LA PAGINA INICIO DE SESIÓN.
+ * @param btnRegistrarme REGISTRA AL USUARIO RECOGIENDO LOS PARÁMETROS ANTERIORES.
+ * @param btnInicio_Sesion DIRIGE AL USUARIO A LA PÁGINA INICIO DE SESIÓN.
  * @param passwordField TIENE EL TEXTO DE LA CONTRASEÑA DEL USUARIO.
  * @param lbl_PuertaSalida_1 CIERRA LA VENTANA.(ESTÉTICO)
  * @param lbl_Fecha TIENE EL TEXTO DE FECHA PARA QUE EL USUARIO INTRODUZCA LA FECHA DE CADUCIDAD.(ESTÉTICO)
  * @param lbl_Tipo TIENE EL TEXTO PARA QUE EL USUARIO SELECCIONE EL TIPO DE PAGO.(ESTÉTICO)
- * @param lbl_NCUENTA TIENE EL TEXTO PARA QUE EL USUARIO ESCRIBA EL NUMERO DE CUENTA.(ESTÉTICO)
- * @param lbl_Tlf TIENE EL TEXTO DE TLF PARA INTRODUCIR EL TELÉFONO.(ESTÉTICO)
- * @param lbl_Calle TIENE EL TITULO DE LA CALLE.(ESTÉTICO)
+ * @param lbl_NCUENTA TIENE EL TEXTO PARA QUE EL USUARIO ESCRIBA EL NÚMERO DE CUENTA.(ESTÉTICO)
+ * @param lbl_Tlf TIENE EL TEXTO DE TELÉFONO PARA INTRODUCIR EL TELÉFONO.(ESTÉTICO)
+ * @param lbl_Calle TIENE EL TÍTULO DE LA CALLE.(ESTÉTICO)
  * @param lbl_DatosBancarios TIENE EL TEXTO DE DATOS BANCARIOS.(ESTÉTICO)
  * @param lbl_Contraseña1 TIENE EL TEXTO DE INTRODUCE LA CONTRASEÑA.(ESTÉTICO)
- * @param lbl_confirmacionEmail TIENE EL TEXTO DE CONFIRMA EL EMAIL.(ESTÉTICO)
+ * @param lbl_confirmacionEmail TIENE EL TEXTO  QUE CONFIRMA EL EMAIL.(ESTÉTICO)
  * @param lbl_Email TIENE EL TEXTO DE EMAIL.(ESTÉTICO)
- * @param lbl_Apellido TIENE EL TITULO DE INTRODUCIR EL APELLIDO.(ESTÉTICO)
- * @param lbl_AccesoAMiembros TIENE EL TITULO DE ACCESO A MIEMBROS.(ESTÉTICO)
- * @param lbl_REGISTRO TIENE EL TITULO DE REGISTRO PARA SER MIEMBROS.(ESTÉTICO)
- * @param lbl_nom TIENE EL TITULO DE NOMBRE.(ESTÉTICO)
+ * @param lbl_Apellido TIENE EL TÍTULO DE INTRODUCIR EL APELLIDO.(ESTÉTICO)
+ * @param lbl_AccesoAMiembros TIENE EL TÍTULO DE ACCESO A MIEMBROS.(ESTÉTICO)
+ * @param lbl_REGISTRO TIENE EL TÍTULO DE REGISTRO PARA SER MIEMBROS.(ESTÉTICO)
+ * @param lbl_nom TIENE EL TÍTULO DE NOMBRE.(ESTÉTICO)
  * @param lbl_Logo TIENE EL LOGO DE LA EMPRESA.(ESTÉTICO)
  * @param lblBordeSuperior TIENE EL BORDE DE LA PARTE SUPERIOR.
  * @param lbl_Fondo TIENE LA IMAGEN DE FONDO DE LA PÁGINA.
- * @author TRILOGY. Miembros: Adrian Leal Vacas, Gonzalo Amo Cano y Raul Senso Montojo.
+ * @author TRILOGY. Miembros: Adrián Leal Vacas, Gonzalo Amo Cano y Raúl Senso Montojo.
  */
 public class Formulario extends JFrame {
 	/**
-	 * Es la versión numero 1 de la página de formulario.
+	 * Es la única versión número de la página de formulario.
 	 */
 	private static final long serialVersionUID = 1L;
 	// ----------------------------------------------------------------------------------------
@@ -97,11 +97,12 @@ public class Formulario extends JFrame {
 	private JTextField textCalle;
 	private int verificar_datos=0;
 	private JComboBox<String> ComboBoxTipo;
+	private String texto;
 	// ----------------------------------------------------------------------------------------
 	// MÉTODO MAIN
 	// ----------------------------------------------------------------------------------------
 	/**
-	 * En el MÉTODO main ejecutamos la ventana principal de registro (class Formulario) llamada Formulario donde se ejecuta la ventana de Formulario.
+	 * En el método main ejecutamos la ventana principal de registro (class Formulario) llamada Formulario, donde se ejecuta la ventana de Formulario.
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -119,7 +120,7 @@ public class Formulario extends JFrame {
 	// CONSTRUCTOR
 	// ----------------------------------------------------------------------------------------
 	/**
-	 * En el constructor Formulario() estan todos los atributos y métodos necesarios para cuando creemos el objeto tenga toda la funcionalidades.
+	 * En el constructor Formulario() estaán todos los atributos y métodos necesarios para cuando creemos el objeto tenga todas las funcionalidades.
 	 */
 	public Formulario() {
 		// ----------------------------------------------------------------------------------------
@@ -143,29 +144,33 @@ public class Formulario extends JFrame {
 		lbl_PuertaSalida_1.setBackground(new Color(32,171,85));
 		lbl_PuertaSalida_1.addMouseListener(new MouseAdapter() {
 			@Override
+			//CUANDO EL RATÓN PASA POR ENCIMA
 			public void mouseEntered(MouseEvent e) {
 				lbl_PuertaSalida_1.setBackground(new Color(153,255,153));
 			}
 			@Override
+			//CUANDO EL RATÓN DEJA DE PASAR POR ENCIMA
 			public void mouseExited(MouseEvent e) {
 				lbl_PuertaSalida_1.setBackground(new Color(32,171,85));
 			}
 			@Override
+			//CUANDO PULSAS
 			public void mouseClicked(MouseEvent e) {
-				System.exit(0);
+				System.exit(0);//CIERRA LAS VENTANAS
 			}
 		});
 		lbl_PuertaSalida_1.setIcon(new ImageIcon(Formulario.class.getResource("/Trilogy_imagenes/IconoLogout.png")));
 		lbl_PuertaSalida_1.setBounds(10, 537, 64, 57);//TAMAÑO DEL CUADRO
 		ImageIcon imgIconoSalida = new ImageIcon(IconoSalida.getImage().getScaledInstance(lbl_PuertaSalida_1.getWidth(), lbl_PuertaSalida_1.getHeight(), Image.SCALE_SMOOTH));
+		lbl_PuertaSalida_1.setIcon(imgIconoSalida);
 		//------------------------------------------------------------------------------------------------------
 		//txtIntroduceTuNombre TIENE EL TEXTO DEL NOMBRE DEL USUARIO.
 		//------------------------------------------------------------------------------------------------------
-		txtIntroduceTuNombre = new JTextField(); // ACCIÓN CUANDO HACES CLICK PARA ESCRIBIR TU USUARIO
+		txtIntroduceTuNombre = new JTextField(); // ACCIÓN CUANDO PULSAS PARA ESCRIBIR TU USUARIO
 		txtIntroduceTuNombre.addFocusListener(new FocusListener() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				if(txtIntroduceTuNombre.getText().equalsIgnoreCase("Introduce tu nombre")) { //CONDICION PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
+				if(txtIntroduceTuNombre.getText().equalsIgnoreCase("Introduce tu nombre")) { //CONDICIÓN PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
 					txtIntroduceTuNombre.setText("");
 					txtIntroduceTuNombre.setForeground(Color.BLACK); // CAMBIO EL COLOR DE GRIS CLARO A NEGRO
 					txtIntroduceTuNombre.setBackground(Color.WHITE); // SIGO CON EL FONDO BLANCO
@@ -182,12 +187,13 @@ public class Formulario extends JFrame {
 			}
 		});
 		//-----------------------------------------------------------------------------------------------------------------------------------------------------
-		//---------------------------------- TEXTO PARA INTRODUCIR EL tlf-------------------------------------------------------------------------
-		JTextField txtIntroduceElTLF = new JTextField(); // ACCIÓN CUANDO HACES CLICK PARA ESCRIBIR TU USUARIO
+		// TEXTO PARA INTRODUCIR EL TELÉFONO
+		//-----------------------------------------------------------------------------------------------------------------------------------------------------
+		JTextField txtIntroduceElTLF = new JTextField(); // ACCIÓN CUANDO PULSAS PARA ESCRIBIR TU USUARIO
 		txtIntroduceElTLF.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if(txtIntroduceElTLF.getText().equalsIgnoreCase("Introduce el tlf")) { //CONDICION PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
+				if(txtIntroduceElTLF.getText().equalsIgnoreCase("Introduce el tlf")) { //CONDICIÓN PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
 					txtIntroduceElTLF.setText("");
 					txtIntroduceElTLF.setForeground(Color.BLACK); // CAMBIO EL COLOR DE GRIS CLARO A NEGRO
 					txtIntroduceElTLF.setBackground(Color.WHITE); // SIGO CON EL FONDO BLANCO
@@ -197,11 +203,11 @@ public class Formulario extends JFrame {
 		//------------------------------------------------------------------------------------------------------
 		//text_IntroduceApellidos_1 TIENE EL TEXTO DE LOS APELLIDOS DEL USUARIO.
 		//------------------------------------------------------------------------------------------------------
-		text_IntroduceApellidos_1 = new JTextField(); // ACCIÓN CUANDO HACES CLICK PARA ESCRIBIR TU USUARIO
+		text_IntroduceApellidos_1 = new JTextField(); // ACCIÓN CUANDO PULSAS PARA ESCRIBIR TU USUARIO
 		text_IntroduceApellidos_1.addFocusListener(new FocusListener() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				if(text_IntroduceApellidos_1.getText().equalsIgnoreCase("Introduce tus apellidos")) { //CONDICION PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
+				if(text_IntroduceApellidos_1.getText().equalsIgnoreCase("Introduce tus apellidos")) { //CONDICIÓN PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
 					text_IntroduceApellidos_1.setText("");
 					text_IntroduceApellidos_1.setForeground(Color.BLACK); // CAMBIO EL COLOR DE GRIS CLARO A NEGRO
 					text_IntroduceApellidos_1.setBackground(Color.WHITE); // SIGO CON EL FONDO BLANCO
@@ -230,7 +236,7 @@ public class Formulario extends JFrame {
 		txtIntroduceElNtlf.addFocusListener(new FocusListener() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				if(txtIntroduceElNtlf.getText().equalsIgnoreCase("Introduce el NºTLF")) { //CONDICION PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
+				if(txtIntroduceElNtlf.getText().equalsIgnoreCase("Introduce el NºTLF")) { //CONDICIÓN PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
 					txtIntroduceElNtlf.setText("");
 					txtIntroduceElNtlf.setForeground(Color.BLACK); // CAMBIO EL COLOR DE GRIS CLARO A NEGRO
 					txtIntroduceElNtlf.setBackground(Color.WHITE); // SIGO CON EL FONDO BLANCO
@@ -253,7 +259,7 @@ public class Formulario extends JFrame {
 		txt_confirmaEmail.addFocusListener(new FocusListener() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				if(txt_confirmaEmail.getText().equalsIgnoreCase("Introduce tu email")) { //CONDICION PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
+				if(txt_confirmaEmail.getText().equalsIgnoreCase("Introduce tu email")) { //CONDICIÓN PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
 					txt_confirmaEmail.setText("");
 					txt_confirmaEmail.setForeground(Color.BLACK); // CAMBIO EL COLOR DE GRIS CLARO A NEGRO
 					txt_confirmaEmail.setBackground(Color.WHITE); // SIGO CON EL FONDO BLANCO
@@ -276,7 +282,7 @@ public class Formulario extends JFrame {
 		txtFecha.addFocusListener(new FocusListener() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				if(txtFecha.getText().equalsIgnoreCase("Introduce la Fecha")) { //CONDICION PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
+				if(txtFecha.getText().equalsIgnoreCase("Introduce la Fecha")) { //CONDICIÓN PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
 					txtFecha.setText("");
 					txtFecha.setForeground(Color.BLACK); // CAMBIO EL COLOR DE GRIS CLARO A NEGRO
 					txtFecha.setBackground(Color.WHITE); // SIGO CON EL FONDO BLANCO
@@ -299,69 +305,71 @@ public class Formulario extends JFrame {
 		txtFecha.setBackground(Color.WHITE);
 		txtFecha.setBounds(723, 497, 224, 30);
 		//------------------------------------------------------------------------------------------------------
-		//btnRegistrarme REGISTRA AL USUARIO RECOGIENDO LOS PARAMETROS ANTERIORES.
+		//btnRegistrarme REGISTRA AL USUARIO RECOGIENDO LOS PARÁMETROS ANTERIORES.
 		//------------------------------------------------------------------------------------------------------
 		String ncuenta="^ES\\d+$";
 		String tlfnRegexp="^[6]\\d{8}$";
-		//VALIDA QUE TENGA CUALQUIER CARACTER ANTES DEL ARROBA, PPERO NO PUEDE EMPEZAR POR UN NUMERO, NO PERMITE CARACTERES ESPECIALES SALVO PUNTOS Y GUÓN BAJO, DESPUES DEL @ SOLO PERMITE GMAIL O HOTMAIL .COM/ES
+		//COMPRUEBA QUE TENGA CUALQUIER CARÁCTER ANTES DEL "@"", PERO NO PUEDE EMPEZAR POR UN NÚMERO, NO PERMITE CARACTERES ESPECIALES, SALVO PUNTOS Y GUIÓN BAJO, DESPUES DEL "@"", SOLO PERMITE GMAIL O HOTMAIL .COM/ES
 		String emailRegexp="^[a-zA-Z][a-zA-Z0-9._]*(?<!\\.)@(GMAIL|HOTMAIL)\\.(COM|ES)$"; 
-		//VALIDA QUE TENGA MAYUSCULAS, MINUSCULAS, LETRAS, NUMEROS Y CARACTERES ESPECIALES ALMENOS UNO, MAS O IGUAL A 8 CARACTERES Y MENOS O IGUAL A 60
+		//COMPRUEBA QUE TENGA MAYÚSCULAS, MINÚSCULAS, LETRAS, NÚMEROS Y CARACTERES ESPECIALES AL MENOS UNO, MÁS O IGUAL A 8 CARACTERES Y MENOS O IGUAL A 60
 		String passwdRegexp="^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[^\\w\\s]).{8,60}$";
 		btnRegistrarme = new JButton("REGISTRARME");
 		btnRegistrarme.addMouseListener(new MouseAdapter() {
 			@SuppressWarnings("deprecation")
 			@Override
+			//CUANDO PULSAS
 			public void mouseClicked(MouseEvent e) {
+				texto="";
 				verificar_datos=0;
 				String fechaParaBD = null;
-				if(Pattern.matches(emailRegexp, txtIntroduceTusEmail_1.getText().toUpperCase()) && txtIntroduceTusEmail_1.getText().length()<46) {
-					System.out.println("Email correcto");
-					verificar_datos+=1;
-				}
-				else {
-					System.out.println("Email erroneo");
-				}
-				if(Pattern.matches(emailRegexp, txt_confirmaEmail.getText().toUpperCase()) && txt_confirmaEmail.getText().length()<46 && txtIntroduceTusEmail_1.getText().toUpperCase().equals( txt_confirmaEmail.getText().toUpperCase())) {
-					System.out.println("Confirmar Email correcto");
-					verificar_datos+=1;
-				}
-				else {
-					System.out.println("Confirmar Email erroneo");
-				}
-				if(Pattern.matches(passwdRegexp, passwordField.getText())) {
-					System.out.println("Contraseña correcta");
-					verificar_datos+=1;
-				}
-				else {
-					System.out.println("Contraseña incorrecta");
-				}
-				if(txtIntroduceTuNombre.getText().toUpperCase().length()<31) {
+				if(txtIntroduceTuNombre.getText().toUpperCase().length()<31 && !txtIntroduceTuNombre.getText().equalsIgnoreCase("Introduce tu nombre")) {
 					System.out.println("Nombre Correcto");
 					verificar_datos+=1;
 				}
 				else {
-					System.out.println("Nombre Incorrecto");
+					texto+="Nombre, ";
 				}
-				if(text_IntroduceApellidos_1.getText().toUpperCase().length()<31) {
+				if(text_IntroduceApellidos_1.getText().toUpperCase().length()<31 && !text_IntroduceApellidos_1.getText().equalsIgnoreCase("Introduce tus apellidos")) {
 					System.out.println("Apellidos Correctos");
 					verificar_datos+=1;
 				}
 				else {
-					System.out.println("Apellidos Incorrectos");
+					texto+="Apellidos, ";
 				}
 				if(Pattern.matches(tlfnRegexp, txtIntroduceElNtlf.getText().toUpperCase())) {
 					System.out.println("Numero De Tlf Correcto");
 					verificar_datos+=1;
 				}
 				else {
-					System.out.println("Numero De Tlf Incorrecto");
+					texto+="Número de Teléfono, ";
 				}
-				if(Pattern.matches(ncuenta, textNCuenta.getText().toUpperCase()) && textNCuenta.getText().toUpperCase().length()==24) {
-					System.out.println("Numero de cuenta Correcto");
+				if(Pattern.matches(emailRegexp, txtIntroduceTusEmail_1.getText().toUpperCase()) && txtIntroduceTusEmail_1.getText().length()<46) {
+					System.out.println("Email correcto");
 					verificar_datos+=1;
 				}
 				else {
-					System.out.println("Numero de Cuenta Incorrecto");
+					texto+="Email, ";
+				}
+				if(Pattern.matches(emailRegexp, txt_confirmaEmail.getText().toUpperCase()) && txt_confirmaEmail.getText().length()<46 && txtIntroduceTusEmail_1.getText().toUpperCase().equals( txt_confirmaEmail.getText().toUpperCase())) {
+					System.out.println("Confirmar Email correcto");
+					verificar_datos+=1;
+				}
+				else {
+					texto+="Confirmar Email, ";
+				}
+				if(Pattern.matches(passwdRegexp, passwordField.getText())) {
+					System.out.println("Contraseña correcta");
+					verificar_datos+=1;
+				}
+				else {
+					texto+="Contraseña, ";
+				}
+				if(Pattern.matches(ncuenta, textNCuenta.getText().toUpperCase()) && textNCuenta.getText().toUpperCase().length()==24) {
+					System.out.println("Número de cuenta Correcto");
+					verificar_datos+=1;
+				}
+				else {
+					texto+="Número de cuenta, ";
 				}
 				if(txtFecha.getText().length()==7) {
 					// Obtener la fecha actual
@@ -374,7 +382,7 @@ public class Formulario extends JFrame {
 					LocalDate fechaCaducidad = LocalDate.parse(fechaParaBD, formatter);
 					// Verificar si la tarjeta está caducada o no
 					if (fechaCaducidad.isBefore(fechaActual)) {
-						System.out.println("La tarjeta está caducada");
+						texto+="Tarjeta Caducada, ";
 					} else {
 						System.out.println("La tarjeta está vigente");
 						verificar_datos+=1;
@@ -383,7 +391,7 @@ public class Formulario extends JFrame {
 					System.out.println("Fecha para insertar en la base de datos: " + fechaParaBD);
 				}
 				else {
-					System.out.println("Formato Incorrecto ejemplo formato correcto:\"06/2023\"");
+					texto+="Fecha Invalida, ";
 				}
 				System.out.println(verificar_datos);
 				if (verificar_datos==8) {
@@ -401,7 +409,7 @@ public class Formulario extends JFrame {
 					secMebresias.setVisible(true);
 					dispose();
 				} else {
-					JOptionPane.showMessageDialog(null, "ERROR. Datos introducidos son icorrectos verifique los datos por favor.");
+					JOptionPane.showMessageDialog(null, "ERROR. Datos incorrectos verifique estos datos por favor: "+texto);
 				}
 			}
 		});
@@ -410,7 +418,7 @@ public class Formulario extends JFrame {
 		btnRegistrarme.setBackground(new Color(255, 255, 255));
 		btnRegistrarme.setBounds(865, 551, 128, 30);
 		// ------------------------------------------------------------------------------------------------------
-		// btnInicio_Sesion MANDA AL USUARIO A LA PAGINA INICIO DE SESIÓN.
+		// btnInicio_Sesion MANDA AL USUARIO A LA PÁGINA INICIO DE SESIÓN.
 		// ------------------------------------------------------------------------------------------------------
 		btnInicio_Sesion = new JButton("INICIO SESIÓN");
 		btnInicio_Sesion.addMouseListener(new MouseAdapter() {
@@ -426,13 +434,13 @@ public class Formulario extends JFrame {
 		btnInicio_Sesion.setBackground(Color.WHITE);
 		btnInicio_Sesion.setBounds(1006, 551, 128, 30);
 		// ------------------------------------------------------------------------------------------------------
-		// textNCuenta TIENE EL TEXTO DEL NUMERO DE CUENTA DE LA TARJETA DEL USUARIO.
+		// textNCuenta TIENE EL TEXTO DEL NÚMERO DE CUENTA DE LA TARJETA DEL USUARIO.
 		// ------------------------------------------------------------------------------------------------------
 		textNCuenta = new JTextField();
 		textNCuenta.addFocusListener(new FocusListener() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				if(textNCuenta.getText().equalsIgnoreCase("Introduce el Nº de Cuenta")) { //CONDICION PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
+				if(textNCuenta.getText().equalsIgnoreCase("Introduce el Nº de Cuenta")) { //CONDICIÓN PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
 					textNCuenta.setText("");
 					textNCuenta.setForeground(Color.BLACK); // CAMBIO EL COLOR DE GRIS CLARO A NEGRO
 					textNCuenta.setBackground(Color.WHITE); // SIGO CON EL FONDO BLANCO
@@ -466,9 +474,9 @@ public class Formulario extends JFrame {
 		lbl_Fecha.setBackground(Color.WHITE);
 		lbl_Fecha.setBounds(723, 456, 99, 30);
 		//------------------------------------------------------------------------------------------------------
-		//lbl_NCUENTA TIENE EL TEXTO PARA QUE EL USUARIO ESCRIBA EL NUMERO DE CUENTA.(ESTÉTICO)
+		//lbl_NCUENTA TIENE EL TEXTO PARA QUE EL USUARIO ESCRIBA EL NÚMERO DE CUENTA.(ESTÉTICO)
 		//------------------------------------------------------------------------------------------------------
-		JLabel lbl_NCUENTA = new JLabel("Nº CUENTA");
+		JLabel lbl_NCUENTA = new JLabel("Nº Cuenta");
 		lbl_NCUENTA.setOpaque(true);
 		lbl_NCUENTA.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_NCUENTA.setForeground(Color.BLACK);
@@ -506,7 +514,7 @@ public class Formulario extends JFrame {
 			@SuppressWarnings("deprecation")
 			@Override
 			public void focusGained(FocusEvent e) {
-				if(passwordField.getText().equalsIgnoreCase("*******************")) { //CONDICION PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
+				if(passwordField.getText().equalsIgnoreCase("*******************")) { //CONDICIÓN PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
 					passwordField.setText("");
 					passwordField.setForeground(Color.BLACK); // CAMBIO EL COLOR DE GRIS CLARO A NEGRO
 					passwordField.setBackground(Color.WHITE); // SIGO CON EL FONDO BLANCO
@@ -548,11 +556,11 @@ public class Formulario extends JFrame {
 		//------------------------------------------------------------------------------------------------------
 		//txt_confirmaEmail TIENE EL TEXTO DE LA CONFIRMACIÓN DE EMAIL.
 		//------------------------------------------------------------------------------------------------------
-		JTextField txtConfirmaElEmail = new JTextField(); // ACCIÓN CUANDO HACES CLICK PARA ESCRIBIR TU USUARIO
+		JTextField txtConfirmaElEmail = new JTextField(); // ACCIÓN CUANDO PULSAS PARA ESCRIBIR TU USUARIO
 		txtConfirmaElEmail.addFocusListener(new FocusListener() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				if(txtConfirmaElEmail.getText().equalsIgnoreCase("Confirma el email")) { //CONDICION PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
+				if(txtConfirmaElEmail.getText().equalsIgnoreCase("Confirma el email")) { //CONDICIÓN PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
 					txtConfirmaElEmail.setText("");
 					txtConfirmaElEmail.setForeground(Color.BLACK); // CAMBIO EL COLOR DE GRIS CLARO A NEGRO
 					txtConfirmaElEmail.setBackground(Color.WHITE); // SIGO CON EL FONDO BLANCO
@@ -590,11 +598,11 @@ public class Formulario extends JFrame {
 		//------------------------------------------------------------------------------------------------------
 		//txtIntroduceTusEmail_1 TIENE EL TEXTO DEL EMAIL DEL USUARIO.
 		//------------------------------------------------------------------------------------------------------
-		txtIntroduceTusEmail_1 = new JTextField(); // ACCIÓN CUANDO HACES CLICK PARA ESCRIBIR TU USUARIO
+		txtIntroduceTusEmail_1 = new JTextField(); // ACCIÓN CUANDO PULSAS PARA ESCRIBIR TU USUARIO
 		txtIntroduceTusEmail_1.addFocusListener(new FocusListener() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				if(txtIntroduceTusEmail_1.getText().equalsIgnoreCase("Introduce tu email")) { //CONDICION PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
+				if(txtIntroduceTusEmail_1.getText().equalsIgnoreCase("Introduce tu email")) { //CONDICIÓN PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
 					txtIntroduceTusEmail_1.setText("");
 					txtIntroduceTusEmail_1.setForeground(Color.BLACK); // CAMBIO EL COLOR DE GRIS CLARO A NEGRO
 					txtIntroduceTusEmail_1.setBackground(Color.WHITE); // SIGO CON EL FONDO BLANCO
@@ -655,11 +663,11 @@ public class Formulario extends JFrame {
 		ComboBoxTipo.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		ComboBoxTipo.setOpaque(true);
 		ComboBoxTipo.setBackground(new Color(255, 255, 255));
-		ComboBoxTipo.setModel(new DefaultComboBoxModel<String>(new String[] {"Tarjeta de credito", "Tarjeta de debito", "MASTERCAD"}));
+		ComboBoxTipo.setModel(new DefaultComboBoxModel<String>(new String[] {"Tarjeta de credito", "Tarjeta de debito", "MASTERCAD","PayPal"}));
 		//------------------------------------------------------------------------------------------------------
-		//lbl_Apellido TIENE EL TITULO DE INTRODUCIR EL APELLIDO.(ESTÉTICO)
+		//lbl_Apellido TIENE EL TÍTULO DE INTRODUCIR EL APELLIDO.(ESTÉTICO)
 		//------------------------------------------------------------------------------------------------------
-		JLabel lbl_Apellido = new JLabel("APELLIDOS");
+		JLabel lbl_Apellido = new JLabel("Apellidos");
 		lbl_Apellido.setOpaque(true);
 		lbl_Apellido.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl_Apellido.setForeground(Color.BLACK);
@@ -668,19 +676,18 @@ public class Formulario extends JFrame {
 		lbl_Apellido.setBackground(Color.WHITE);
 		lbl_Apellido.setBounds(325, 196, 112, 32);
 		//------------------------------------------------------------------------------------------------------
-		//lbl_AccesoAMiembros TIENE EL TITULO DE ACCESO A MIEMBROS.(ESTÉTICO)
+		//lbl_AccesoAMiembros TIENE EL TÍTULO DE ACCESO A MIEMBROS.(ESTÉTICO)
 		//------------------------------------------------------------------------------------------------------
 		JLabel lbl_AccesoAMiembros = new JLabel("ACCESO A MIEMBROS");
 		lbl_AccesoAMiembros.setForeground(new Color(0, 0, 0)); //EL COLOR DEL TEXTO
-		lbl_AccesoAMiembros.setBorder(new LineBorder(Color.LIGHT_GRAY)); // eL COLOR DLE BORDE DEL CUADRO
+		lbl_AccesoAMiembros.setBorder(new LineBorder(Color.LIGHT_GRAY)); // EL COLOR DEL BORDE DEL CUADRO
 		lbl_AccesoAMiembros.setFont(new Font("Tahoma", Font.BOLD, 14)); // TIPO DE LETRA,TAMAÑO...
 		lbl_AccesoAMiembros.setHorizontalAlignment(SwingConstants.CENTER); //CENTRAR EL TEXTO DEL CUADRO
-		lbl_AccesoAMiembros.setOpaque(true); // LINEA OBLIGATORIA PARA QUE EL FONDO TENGA COLOR SOLIDO
+		lbl_AccesoAMiembros.setOpaque(true); // LÍNEA OBLIGATORIA PARA QUE EL FONDO TENGA COLOR SÓLIDO
 		lbl_AccesoAMiembros.setBackground(Color.WHITE);// COLOR DE FONDO
 		lbl_AccesoAMiembros.setBounds(59, 59, 232, 32);//TAMAÑO DEL CUADRO
-		lbl_PuertaSalida_1.setIcon(imgIconoSalida);
 		// ------------------------------------------------------------------------------------------------------
-		// lbl_REGISTRO TIENE EL TITULO DE REGISTRO PARA SER MIEMBROS.(ESTÉTICO)
+		// lbl_REGISTRO TIENE EL TÍTULO DE REGISTRO PARA SER MIEMBROS.(ESTÉTICO)
 		// ------------------------------------------------------------------------------------------------------
 		JLabel lbl_REGISTRO = new JLabel("REGISTRO PARA SER MIEMBRO:");
 		lbl_REGISTRO.setOpaque(true);
@@ -691,18 +698,18 @@ public class Formulario extends JFrame {
 		lbl_REGISTRO.setBackground(Color.WHITE);
 		lbl_REGISTRO.setBounds(59, 143, 431, 42);
 		//------------------------------------------------------------------------------------------------------
-		//lbl_nom TIENE EL TITULO DE NOMBRE.(ESTÉTICO)
+		//lbl_nom TIENE EL TÍTULO DE NOMBRE.(ESTÉTICO)
 		//------------------------------------------------------------------------------------------------------
 		JLabel lbl_nom = new JLabel("NOMBRE");
 		lbl_nom.setForeground(new Color(0, 0, 0)); //EL COLOR DEL TEXTO
-		lbl_nom.setBorder(new LineBorder(Color.LIGHT_GRAY)); // eL COLOR DLE BORDE DEL CUADRO
+		lbl_nom.setBorder(new LineBorder(Color.LIGHT_GRAY)); // EL COLOR DEL BORDE DEL CUADRO
 		lbl_nom.setFont(new Font("Tahoma", Font.BOLD, 14)); // TIPO DE LETRA,TAMAÑO...
 		lbl_nom.setHorizontalAlignment(SwingConstants.CENTER); //CENTRAR EL TEXTO DEL CUADRO
-		lbl_nom.setOpaque(true); // LINEA OBLIGATORIA PARA QUE EL FONDO TENGA COLOR SOLIDO
+		lbl_nom.setOpaque(true); // LÍNEA OBLIGATORIA PARA QUE EL FONDO TENGA COLOR SÓLIDO
 		lbl_nom.setBackground(Color.WHITE); // EL COLOR DEL FONDO
 		lbl_nom.setBounds(59, 196, 112, 32);//TAMAÑO DEL CUADRO
 		//------------------------------------------------------------------------------------------------------
-		//lbl_Calle TIENE EL TITULO DE LA CALLE.(ESTÉTICO)
+		//lbl_Calle TIENE EL TÍTULO DE LA CALLE.(ESTÉTICO)
 		//------------------------------------------------------------------------------------------------------
 		JLabel lbl_Calle = new JLabel("CALLE");
 		lbl_Calle.setOpaque(true);
@@ -725,7 +732,7 @@ public class Formulario extends JFrame {
 		textCalle.addFocusListener(new FocusListener() {
 			@Override
 			public void focusGained(FocusEvent e) {
-				if(textCalle.getText().equalsIgnoreCase("Introduce tu calle")) { //CONDICION PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
+				if(textCalle.getText().equalsIgnoreCase("Introduce tu calle")) { //CONDICIÓN PARA QUE SE MANTENGA EL TEXTO DEL USUARIO SI LO HAN ESCRITO
 					textCalle.setText("");
 					textCalle.setForeground(Color.BLACK); // CAMBIO EL COLOR DE GRIS CLARO A NEGRO
 					textCalle.setBackground(Color.WHITE); // SIGO CON EL FONDO BLANCO
@@ -746,14 +753,14 @@ public class Formulario extends JFrame {
 		//------------------------------------------------------------------------------------------------------
 		JLabel lbl_Logo = new JLabel();
 		lbl_Logo.setBounds(744, 43, 390, 110); //TAMAÑO DLE CUADRO
-		ImageIcon logo = new ImageIcon(getClass().getResource("/Trilogy_imagenes/LogoTrilogy.jpg")); //DIRECCION DE LA IMAGEN QUE QUIERO AJUSTAR		
+		ImageIcon logo = new ImageIcon(getClass().getResource("/Trilogy_imagenes/LogoTrilogy.jpg")); //DIRECCIÓN DE LA IMAGEN QUE QUIERO AJUSTAR		
 		ImageIcon imglogo = new ImageIcon(logo.getImage().getScaledInstance(lbl_Logo.getWidth(), lbl_Logo.getHeight(), Image.SCALE_AREA_AVERAGING)); // CREAMOS OTRO OBJETO PARA QUE SE AJUSTE AUTOMÁTICAMENTE LA IMAGEN AL LABEL
 		lbl_Logo.setIcon(imglogo);
 		//------------------------------------------------------------------------------------------------------
 		//lblBordeSuperior TIENE EL BORDE DE LA PARTE SUPERIOR.
 		//------------------------------------------------------------------------------------------------------
 		JLabel lblBordeSuperior = new JLabel();
-		lblBordeSuperior.setOpaque(true); // LINEA OBLIGATORIA PARA QUE EL FONDO TENGA COLOR SOLIDO
+		lblBordeSuperior.setOpaque(true); // LÍNEA OBLIGATORIA PARA QUE EL FONDO TENGA COLOR SÓLIDO
 		lblBordeSuperior.setBackground(new Color(153, 255, 153));
 		lblBordeSuperior.setBounds(0, 49, 1164, 83);
 		//------------------------------------------------------------------------------------------------------
@@ -763,7 +770,7 @@ public class Formulario extends JFrame {
 		lbl_Fondo.setBackground(new Color(255, 255, 255));
 		lbl_Fondo.setToolTipText("");
 		lbl_Fondo.setBounds(0, 0, 1164, 605);//TAMAÑO DEL CUADRO
-		ImageIcon fondo1 = new ImageIcon(getClass().getResource("/Trilogy_imagenes/Fondo_Formulario.png")); // DIRECCION DE LA IMAGEN QUE QUIERO AJUSTAR
+		ImageIcon fondo1 = new ImageIcon(getClass().getResource("/Trilogy_imagenes/Fondo_Formulario.png")); // DIRECCIÓN DE LA IMAGEN QUE QUIERO AJUSTAR
 		ImageIcon imgfondo = new ImageIcon(fondo1.getImage().getScaledInstance(lbl_Fondo.getWidth(), lbl_Fondo.getHeight(), Image.SCALE_SMOOTH)); // CREAMOS OTRO OBJETO PARA QUE SE AJUSTE AUTOMÁTICAMENTE LA IMAGEN AL LABEL
 		lbl_Fondo.setIcon(imgfondo);
 		//------------------------------------------------------------------------------------------------------
